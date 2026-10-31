@@ -7,26 +7,19 @@ with open(Path(__file__).parent / "data.txt") as file:
     for radek in file:
         list.append(int(radek))
 
-    print(list)
+    #print(list)
 
-"""
-soucetRovnaSe2020 = False
+
 for i,v in enumerate(list):
     #print(v)
-    for j,w in enumerate(list[i:]):
-        #print(j)
-        for k in list[j:]:
+    for j,w in enumerate(list[i+1:]):
+        if (v + w) == 2020:
+            print(f"prvni cast: = {v * w}")
+        for k in list[i+j+1:]:
             if (v + w + k) == 2020:
-                soucetRovnaSe2020 = True
-                print(k)
+                print(f"druha cast: = {v * w * k}")
                 break
-        if soucetRovnaSe2020 == True:
-            print(w)
-            break
-    if soucetRovnaSe2020 == True:
-        print(v)
-        break
 
-print(1255*765)
-print(282*883*855)
-"""
+        
+#print(1255*765)
+#print(282*883*855)
